@@ -1,0 +1,16 @@
+﻿<Window x:Class="WPFTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="344.279" Width="518.27" Loaded="Window_Loaded">
+    <Grid>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="57" Margin="157,10,0,0" VerticalAlignment="Top" Width="140" Click="button_Click"/>
+        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="221" Margin="0,88,0,0" VerticalAlignment="Top" Width="507">
+            <FlowDocument/>
+        </RichTextBox>
+
+    </Grid>
+</Window>
