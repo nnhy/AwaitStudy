@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using NewLife.Log;
+using NewLife.Security;
 
 namespace AwaitTest
 {
@@ -15,21 +16,23 @@ namespace AwaitTest
             WriteStep("主函数1");
 
             Task.Run(Test);
-
+            Thread.Sleep(100);
             WriteStep("主函数2");
 
             await Test();
-
             WriteStep("主函数3");
         }
 
         static async Task Test()
         {
-            WriteStep("子函数1");
+            var key = Rand.Next();
+            WriteStep("子函数1 " + key);
 
-            await Task.Delay(1000);
+            await Task.Delay(1300);
+            WriteStep("子函数2 " + key);
 
-            WriteStep("子函数2");
+            await Task.Delay(1700);
+            WriteStep("子函数3 " + key);
         }
 
         static void WriteStep(String name)

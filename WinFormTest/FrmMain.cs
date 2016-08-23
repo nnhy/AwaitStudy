@@ -22,6 +22,7 @@ namespace WinFormTest
         private void button1_Click(Object sender, EventArgs e)
         {
             Await.Start();
+            XTrace.WriteLine("OK!");
         }
 
         private void FrmMain_Load(Object sender, EventArgs e)
